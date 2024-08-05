@@ -1,5 +1,7 @@
+/*this css is only for the home/landing page*/
 body {
     font-family: monospace;
+    overflow: hidden;
 }
 .heading {
     position: absolute;
@@ -13,17 +15,17 @@ body {
     z-index: 1;
 }
 #particles-js {
-  position: fixed; /* Use fixed position to cover the entire viewport */
+  position: relative; /* Use fixed position to cover the entire viewport */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 
 .navbar{
-  position:static;
+  position:fixed;
   font-size: 17px;
   font-family: monospace;
   background-color: transparent;
