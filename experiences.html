@@ -2,271 +2,103 @@
 
 <html>
 <head>
-<style>
-body {
-  overflow: hidden; /* Add this to prevent scrolling */
-}
-      /*styling for navbar on this page*/
-.navbar{
-  position:relative; 
-  font-size: 17px;
-  font-family: monospace;
-  background-color: transparent;
-  overflow: hidden;
-  padding: 14px 16px;
-  float: left;
-  z-index: 2;
-}
-
-.navbar a {
-  color: white;
-  text-align: center;
-  text-decoration: none;
-}
-.navbar a:hover{
-  background-color: white;
-  color: black;
-
-}
-
-.navbar a.active {
-  background-color: white;
-  color: black;
-}
-.ag-format-container {
-  width: 1142px;
-  margin: 0 auto;
-}
-
-#particles-js {
-  position: relative; /* Use fixed position to cover the entire viewport */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -10;
-  background-color: rgb(0, 0, 0);
-}
-
-
-.ag-courses_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-
-  padding: 50px 0;
-}
-.ag-courses_item {
-  -ms-flex-preferred-size: calc(33.33333% - 30px);
-  flex-basis: calc(33.33333% - 30px);
-
-  margin: 0 15px 30px;
-
-  overflow: hidden;
-
-  border-radius: 28px;
-}
-.ag-courses-item_link {
-  display: block;
-  padding: 30px 20px;
-  background-color: #121212;
-
-  overflow: hidden;
-
-  position: relative;
-}
-.ag-courses-item_link:hover,
-.ag-courses-item_link:hover .ag-courses-item_date {
-  text-decoration: none;
-  color: #FFF;
-}
-.ag-courses-item_link:hover .ag-courses-item_bg {
-  -webkit-transform: scale(10);
-  -ms-transform: scale(10);
-  transform: scale(10);
-}
-.ag-courses-item_title {
-  min-height: 87px;
-  margin: 0 0 25px;
-
-  overflow: hidden;
-
-  font-weight: bold;
-  font-size: 30px;
-  color: #FFF;
-
-  z-index: 2;
-  position: relative;
-}
-.ag-courses-item_date-box {
-  font-size: 18px;
-  color: #FFF;
-
-  z-index: 2;
-  position: relative;
-}
-.ag-courses-item_date {
-  font-weight: bold;
-  color: #f9b234;
-
-  -webkit-transition: color .5s ease;
-  -o-transition: color .5s ease;
-  transition: color .5s ease
-}
-.ag-courses-item_bg {
-  height: 128px;
-  width: 128px;
-  background-color: #f9b234;
-
-  z-index: 1;
-  position: absolute;
-  top: -75px;
-  right: -75px;
-
-  border-radius: 50%;
-
-  -webkit-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
-}
-.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
-  background-color: #3ecd5e;
-}
-.ag-courses_item:nth-child(3n) .ag-courses-item_bg {
-  background-color: #e44002;
-}
-.ag-courses_item:nth-child(4n) .ag-courses-item_bg {
-  background-color: #952aff;
-}
-.ag-courses_item:nth-child(5n) .ag-courses-item_bg {
-  background-color: #cd3e94;
-}
-.ag-courses_item:nth-child(6n) .ag-courses-item_bg {
-  background-color: #4c49ea;
-}
-
-
-
-@media only screen and (max-width: 979px) {
-  .ag-courses_item {
-    -ms-flex-preferred-size: calc(50% - 30px);
-    flex-basis: calc(50% - 30px);
-  }
-  .ag-courses-item_title {
-    font-size: 24px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .ag-format-container {
-    width: 96%;
-  }
-
-}
-@media only screen and (max-width: 639px) {
-  .ag-courses_item {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-  }
-  .ag-courses-item_title {
-    min-height: 72px;
-    line-height: 1;
-
-    font-size: 24px;
-  }
-  .ag-courses-item_link {
-    padding: 22px 40px;
-  }
-  .ag-courses-item_date-box {
-    font-size: 16px;
-  }
-
-}
-</style>
 <title>Siva's Website
 </title>
+<link rel="stylesheet" href="experiences.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+}
+
+.ag-courses-item_link {
+  background: rgba(30, 30, 30, 0.18); /* More transparent */
+  border-radius: 28px;
+  border: 1.5px solid rgba(255,255,255,0.12);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+  backdrop-filter: blur(6px) saturate(120%); /* Less blur */
+  -webkit-backdrop-filter: blur(6px) saturate(120%);
+  transition: box-shadow 0.3s, transform 0.3s;
+  color: #fff;
+  display: block;
+  padding: 32px 40px;
+  margin-bottom: 32px;
+  text-decoration: none;
+}
+.ag-courses-item_link:hover {
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.28);
+  transform: scale(1.03);
+}
+
+.ag-courses-item_title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 2px; /* Even less gap */
+  color: #fff;
+}
+
+.ag-courses-item_description {
+  font-size: 16px;
+  color: #eaeaea;
+  margin-bottom: 12px;
+}
+
+.ag-courses-item_date-box {
+  font-size: 17px;
+  color: #fff;
+}
+
+.ag-courses-item_date {
+  color: #fff !important;
+  font-weight: 500;
+}
+</style>
 
 </head>
 
 
 
 <body>
-    <div style="position: absolute; width: 100%; height: 100%;" id="particles-js"> 
+    <div id="particles-js"></div>
 
-        <div class="navbar"><!-- ADD NAVBAR WITH Z-INDEX OF 2 -->
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="https://github.com/skunapuli03/resume/blob/main/Siva_s_Resume%20(10).pdf">Resume</a>
-                <a href="experiences.html">Experience</a>
-            </nav>
-        </div>
+    <div class="navbar"><!-- ADD NAVBAR WITH Z-INDEX OF 2 -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="https://github.com/skunapuli03/resume/blob/main/Siva_s_Resume%20(10).pdf">Resume</a>
+            <a href="experiences.html">Experience</a>
+        </nav>
+    </div>
         
         <div class="ag-format-container">
             <div class="ag-courses_box">
               
-          
               <div class="ag-courses_item">
                 <a href="#" class="ag-courses-item_link">
-                  <div class="ag-courses-item_bg"></div>
-          
                   <div class="ag-courses-item_title">
-                    AI/ML Engineer @ RogoFit
+                    Incoming ML Intern @ Cardinal Health
                   </div>
-          
+                  <div class="ag-courses-item_description">
+                    Engineered a multi-agent AI system with Google's ADK and Gemini for clinical trial patient matching. Developed a RAG pipeline using Vertex AI and BigQuery for data synthesis.
+                  </div>
                   <div class="ag-courses-item_date-box">
                     <span class="ag-courses-item_date">
-                      June 2024 - Present
+                      May 2025 - Aug 2025
                     </span>
                   </div>
                 </a>
               </div>
-          
+
               <div class="ag-courses_item">
                 <a href="#" class="ag-courses-item_link">
-                  <div class="ag-courses-item_bg"></div>
-          
                   <div class="ag-courses-item_title">
-                    Quantum Algorithms Research Intern
+                    R&D Software Engineering Intern @ Chamberlain Group
                   </div>
-          
-                  <div class="ag-courses-item_date-box">
-                    <span class="ag-courses-item_date">
-                      Mar. 2024 - Present
-                    </span>
+                  <div class="ag-courses-item_description">
+                    Designed a low-latency video streaming solution with FFmpeg/GStreamer. Developed Python server-side code for RTSP/TCP streams and a Java/Android notification system.
                   </div>
-                </a>
-              </div>
-          
-              <div class="ag-courses_item">
-                <a href="#" class="ag-courses-item_link">
-                  <div class="ag-courses-item_bg"></div>
-          
-                  <div class="ag-courses-item_title">
-                    Deep Learning/Gen AI Intern Research @ Prasath Labs CCHMC
-                  </div>
-          
-                  <div class="ag-courses-item_date-box">
-                    <span class="ag-courses-item_date">
-                      Mar. 2024 - Present
-                    </span>
-                  </div>
-                </a>
-              </div>
-          
-              <div class="ag-courses_item">
-                <a href="#" class="ag-courses-item_link">
-                  <div class="ag-courses-item_bg"></div>
-          
-                  <div class="ag-courses-item_title">
-                    ECE Co-Op @ Chamberlain Group
-                  </div>
-          
                   <div class="ag-courses-item_date-box">
                     <span class="ag-courses-item_date">
                       Sept. 2023 - Dec. 2023
@@ -274,27 +106,14 @@ body {
                   </div>
                 </a>
               </div>
-              <div class="ag-courses_item">
-                <a href="#" class="ag-courses-item_link">
-                  <div class="ag-courses-item_bg"></div>
-          
-                  <div class="ag-courses-item_title">
-                    Computer Engineer @ NASA L'Space
-                  </div>
-          
-                  <div class="ag-courses-item_date-box">
-                    <span class="ag-courses-item_date">
-                      June 2022 - Oct. 2022
-                    </span>
-                  </div>
-                </a>
-              </div>
-
-          
           
             </div>
           </div>
-    </div>
 
 </body>
+
+<!-- Add Particle.js scripts -->
+<script src="./particles.js-master/particles.js-master/particles.min.js"></script>
+<script src="particles.js-master/demo/js/app.js"></script>
+
 </html>
