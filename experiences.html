@@ -30,7 +30,6 @@ body {
 }
 .ag-courses-item_link:hover {
   box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.28);
-  transform: scale(1.03);
 }
 
 .ag-courses-item_title {
@@ -55,6 +54,17 @@ body {
   color: #fff !important;
   font-weight: 500;
 }
+
+.ag-courses-item_details {
+  display: none;
+  margin-top: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  border-radius: 8px;
+}
+.ag-courses-item_link.expanded .ag-courses-item_details {
+  display: block;
+}
 </style>
 
 </head>
@@ -67,7 +77,7 @@ body {
     <div class="navbar"><!-- ADD NAVBAR WITH Z-INDEX OF 2 -->
         <nav>
             <a href="index.html">Home</a>
-            <a href="https://github.com/skunapuli03/resume/blob/main/Siva_s_Resume%20(10).pdf">Resume</a>
+            <a href="assets/Siva_Resume.pdf" target="_blank">Resume</a>
             <a href="experiences.html">Experience</a>
         </nav>
     </div>
@@ -76,44 +86,72 @@ body {
             <div class="ag-courses_box">
               
               <div class="ag-courses_item">
-                <a href="#" class="ag-courses-item_link">
+                <div class="ag-courses-item_link">
                   <div class="ag-courses-item_title">
-                    Incoming ML Intern @ Cardinal Health
+                    Data Science/ML Intern @ Cardinal Health
                   </div>
                   <div class="ag-courses-item_description">
-                    Engineered a multi-agent AI system with Google's ADK and Gemini for clinical trial patient matching. Developed a RAG pipeline using Vertex AI and BigQuery for data synthesis.
+                    Engineered a multi-agent AI system with Google's ADK and Gemini for clinical trial patient matching. Enhanced a RAG pipeline using Vertex AI Search and BigQuery for data analyses.
                   </div>
                   <div class="ag-courses-item_date-box">
                     <span class="ag-courses-item_date">
                       May 2025 - Aug 2025
                     </span>
                   </div>
-                </a>
+                  <button class="read-more-btn">Read more</button>
+                  <div class="ag-courses-item_details">
+                    <ul>
+                      <li><b>Sequential Multi-Agent AI System:</b> Engineered a stateful, sequential multi-agent framework using Google’s ADK and Gemini models to automate patient matching for oncology clinical trials. Designed an orchestration agent to coordinate specialized sub-agents for patient matching, profile generation, and eligibility filtering.</li>
+                      <li><b>Retrieval-Augmented Generation (RAG) Pipeline & Data Infrastructure:</b> Enhanced an end-to-end RAG pipeline integrating Vertex AI Search to retrieve and synthesize large-scale clinical data. Leveraged BigQuery for downstream analysis of agent-generated outputs, engineering robust callback mechanisms and structured JSON parsing to transform LLM responses into Pandas DataFrames for auditable analyses.</li>
+                      <li><b>Collaborative Leadership:</b> Authored complex prompt strategies to enforce structured, schema-consistent outputs from Gemini models, ensuring high data integrity throughout the pipeline. Co-organized 5+ intern events and led 2 initiatives fostering community engagement.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
               <div class="ag-courses_item">
-                <a href="#" class="ag-courses-item_link">
+                <div class="ag-courses-item_link">
                   <div class="ag-courses-item_title">
                     R&D Software Engineering Intern @ Chamberlain Group
                   </div>
                   <div class="ag-courses-item_description">
-                    Designed a low-latency video streaming solution with FFmpeg/GStreamer. Developed Python server-side code for RTSP/TCP streams and a Java/Android notification system.
+                    Developed a smart home IoT product with low-latency video streaming solution with FFmpeg and GStreamer. Developed Python server-side code for RTSP/TCP streams and a Java/Android notification system.
                   </div>
                   <div class="ag-courses-item_date-box">
                     <span class="ag-courses-item_date">
                       Sept. 2023 - Dec. 2023
                     </span>
                   </div>
-                </a>
+                  <button class="read-more-btn">Read more</button>
+                  <div class="ag-courses-item_details">
+                    <ul>
+                      <li><b>Real-Time Streaming:</b> Designed a low-latency, scalable real-time streaming solution using FFmpeg and GStreamer, consistently maintaining high-quality 1080p playback under variable conditions, and minimal buffering to provide seamless video monitoring for security purposes.</li>
+                      <li><b>Server-Side Development:</b> Designed and developed server-side code in Python for RTSP and TCP streams. Achieved latency less than 1000ms from the Raspberry Pi 4 camera using the socket.io and PiCamera2 libraries. Integrated mediamtx for efficient media data management to optimize performance.</li>
+                      <li><b>Notification System:</b> Used Java & Android and MQTT communication Services, created 2 API endpoints to trigger alerts when the doorbell rings, achieved a success rate 100% in delivering real-time alerts.</li>
+                      <li><b>AI & Embedded:</b> Experimented with STMicro Sensors & YOLOv5 neural network to analyze surroundings.</li>
+                      <li><b>UI/UX:</b> Collaborated with a multidisciplinary team of 6 engineering, UI/UX, and product design interns to develop UI components, and conducted UX surveys and interviewed with 3 smart IoT product users.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
           
             </div>
           </div>
 
-</body>
+<script>
+document.querySelectorAll('.read-more-btn').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    const card = btn.closest('.ag-courses-item_link');
+    card.classList.toggle('expanded');
+    btn.textContent = card.classList.contains('expanded') ? "Show less" : "Read more";
+  });
+});
+</script>
 
 <!-- Add Particle.js scripts -->
 <script src="./particles.js-master/particles.js-master/particles.min.js"></script>
 <script src="particles.js-master/demo/js/app.js"></script>
 
+</body>
 </html>

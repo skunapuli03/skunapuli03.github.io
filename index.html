@@ -2,48 +2,46 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="description" content="ML Engineer and Full Stack Developer specializing in AI systems and data science">
         <link href="style.css" rel="stylesheet">
         <title>SIVA KUMAR KUNAPULI</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+        <!-- Add Typed.js CDN -->
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     </head>
     <body>
+        <div id="particles-js"></div>
+        <div class="navbar"><!-- ADD NAVBAR WITH Z-INDEX OF 2 -->
+          <nav>
+              <a href="index.html">Home</a>
+              <a href="assets/Siva_Resume.pdf" target="_blank">Resume</a>
+              <a href="experiences.html">Experience</a>
+          </nav>
+        </div>
 
-<!--INCLUDE THIS LINE WHENEVER USING PARTICLE.JS-->
-        <div style="position: absolute; width: 100%; height: 100%;" id="particles-js"> 
-
-          <div class="heading"> <!-- basic info -->
-            <h1><span class ="auto-type"></span> </h1>
+        <div class="heading">
+            <h1><span class="auto-type"></span></h1>
+            <p class="tagline">ML Engineer • Data Scientist • Full Stack Developer</p>
+            <p class="subtitle">Building AI Systems with Real-World Impact</p>
             <div class="icons">
-              <a href="http://www.linkedin.com/in/sivak-kunapuli/" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="mailto:kunapuli.4@osu.edu"><i class="far fa-envelope"></i></a>
-              <a href="https://github.com/skunapuli03" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="http://www.linkedin.com/in/sivak-kunapuli/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:kunapuli.4@osu.edu"><i class="far fa-envelope"></i></a>
+                <a href="https://github.com/skunapuli03" target="_blank"><i class="fab fa-github"></i></a>
             </div>
-          </div>
-          <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        </div>
 
-          <script>
-            var typed = new Typed(".auto-type",{
-              strings:["Sivakumar Kunapuli", "ECE @ Ohio State"],
-              typeSpeed: 150,
-              backSpeed: 150,
-              loop: true
-            })
-          </script>
-
-          <div class="navbar"><!-- ADD NAVBAR WITH Z-INDEX OF 2 -->
-            <nav>
-                        <!-- will make sperate html+css files for the other pages -->
-                <a href="index.html">Home</a>
-                <a href="https://github.com/skunapuli03/resume/blob/main/Siva_s_Resume%20(10).pdf">Resume</a>
-                <a href="experiences.html">Experience</a>
-               
-
-            </nav>
-          </div>
-        </div> <!-- Div made for particleJS to be in the background -->
-      <!-- importing particleJS and appJS files -->
-      <script src="./particles.js-master/particles.js-master/particles.min.js"></script>
-      <script src="particles.js-master/demo/js/app.js"></script>
+        <!-- Add Typed.js initialization before particles.js -->
+        <script>
+            var typed = new Typed(".auto-type", {
+                strings: ["Sivakumar Kunapuli", "ML Engineer", "Data Scientist", "ECE @ Ohio State"],
+                typeSpeed: 350,
+                backSpeed: 150,
+                loop: true
+            });
+        </script>
+        
+        <!-- importing particleJS and appJS files -->
+        <script src="./particles.js-master/particles.js-master/particles.min.js"></script>
+        <script src="particles.js-master/demo/js/app.js"></script>
     </body>
 </html>

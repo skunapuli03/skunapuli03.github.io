@@ -98,6 +98,7 @@ body {
 }
 
 /* Expansion styles */
+/* Hide details by default */
 .ag-courses-item_details {
   max-height: 0;
   opacity: 0;
@@ -108,7 +109,7 @@ body {
 }
 
 .ag-courses-item_link.expanded .ag-courses-item_details {
-  max-height: 400px; /* adjust as needed */
+  max-height: 600px; /* adjust as needed */
   opacity: 1;
   margin-top: 18px;
   padding-left: 10px;
@@ -154,6 +155,20 @@ body {
   -webkit-transition: color .5s ease;
   -o-transition: color .5s ease;
   transition: color .5s ease
+}
+.read-more-btn {
+  margin-top: 16px;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.read-more-btn:hover {
+  background: rgba(255,255,255,0.25);
 }
 
 @media only screen and (max-width: 979px) {
